@@ -1,0 +1,80 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "none",
+    "source": "~/.config/fastfetch/arch",
+    "width": 8,
+    "height": 1,
+  },
+  "display": {
+    "separator": "  ",
+  },
+  "modules": [
+	  "break",
+	  "break",
+    {
+      "key": "╭───────────╮",
+      "keyColor": "white",
+      "type": "custom",
+    },
+    {
+      "key": "│ {#red} user    {#white}│",
+      "keyColor": "white",
+      "type": "title",
+      "format": "{user-name}",
+    },
+    {
+      "key": "│ {#yellow}{icon} distro  {#white}│",
+      "format": "{2}",
+      "keyColor": "white",
+      "type": "os",
+    },
+    {
+      "key": "│ {#green}󰖲 wm      {#white}│",
+      "format": "{1}",
+      "keyColor": "white",
+      "type": "wm",
+    },
+    {
+      "key": "│ {#cyan} shell   {#white}│",
+      "keyColor": "white",
+      "type": "shell",
+    },
+    {
+      "key": "│ {#blue}󰍛 cpu     {#white}│",
+      "format": "{1}",
+      "keyColor": "white",
+      "type": "cpu",
+      "showPeCoreCount": true,
+    },
+    {
+      "key": "│ {#magenta}󰉉 disk    {#white}│",
+      "format": "{1} / {2}",
+      "keyColor": "white",
+      "type": "disk",
+      "folders": "/",
+    },
+    {
+      "key": "│ {#white} memory  {#white}│",
+      "format": "{1} / {2}",
+      "keyColor": "white",
+      "type": "memory",
+    },
+    {
+      "key": "├───────────┤",
+      "keyColor": "white",
+      "type": "custom",
+    },
+    {
+      "key": "│ {#39} colors  {#white}│",
+      "keyColor": "white",
+      "type": "colors",
+      "symbol": "circle",
+    },
+    {
+      "key": "╰───────────╯",
+      "keyColor": "white",
+      "type": "custom",
+    },
+  ],
+}

@@ -1,0 +1,160 @@
+{
+    "height": 35,
+    "spacing": 20,
+
+    // --- Core Module Placement ---
+
+    "modules-left": [
+        "custom/archlogo",
+        "clock",
+        "cpu",
+        "memory",
+        "temperature"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/cava",
+        "mpris",
+        "pulseaudio",
+        "network",
+        "battery",
+        "custom/power"
+    ],
+
+    // --- Module Configurations ---
+
+    // Left Modules
+    "custom/archlogo": {
+        "format": ""
+    },
+
+    "clock": {
+        "tooltip": true,
+        "format": " {:%H:%M}",
+        "tooltip-format": "{:%Y-%m-%d}"
+    },
+
+    "cpu": {
+       "interval": 5,
+       "format": "{icon} {usage}%",
+       // Add states here so we can color-code in CSS
+       "states": {
+           "warning": 80,
+           "critical": 85
+       },
+       "format-icons": ["▂", "▃", "▄", "▅", "▆", "▇", "█"],
+       "on-click": "kitty htop",
+    },
+
+    "memory": {
+    "interval": 5,
+    "format": " {}%",
+    "max-length": 10
+    },
+    "temperature": {
+        "interval": 5,
+        "thermal-zone": 0,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C",
+        "format": "{temperatureC}°C "
+    },
+
+    // Center Modules
+    "hyprland/workspaces": {
+        "format": " {icon} ",
+        "format-icons": {
+            "1": " 일 ",
+            "2": " 이 ",
+            "3": " 삼 ",
+            "4": " 사 ",
+            "5": " 오 ",
+            "6": " 육 ",
+            "7": " 칠 ",
+            "8": " 팔 ",
+            "9": " 구 ",
+            "10": " 십 ",
+        }
+    },
+
+    // Right Modules
+
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "default": "",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": ""
+        },
+        "max-length": 30
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "kitty -e pulsemixer",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": " {signalStrength}%",
+        // "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-ethernet": "󰈀 100%",
+        "format-disconnected": " Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{signalStrength}% ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "kitty nmtui",
+    },
+
+    "battery": {
+        "interval": 5,
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons": [
+            "󰁺",  // 0-10% (Vertical Icons)
+            "󰁻",  // 10-20%
+            "󰁼",  // 20-30%
+            "󰁽",  // 30-40%
+            "󰁾",  // 40-50%
+            "󰁿",  // 50-60%
+            "󰂀",  // 60-70%
+            "󰂁",  // 70-80%
+            "󰂂",  // 80-90%
+            "󱈏"   // 90-100%
+        ],
+        // Set states for CSS color-coding:
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
+    },
+    
+    "custom/power": {
+        "format": "",
+        "on-click": "~/.config/hypr/scripts/powermenu.sh",
+        "tooltip": false
+    }
+}

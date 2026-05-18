@@ -1,0 +1,61 @@
+/*@import url('/home/zoly/.cache/wal/colors-waybar.css');*/
+@import "colors.css";
+
+* {
+    font-family: "FiraCode Nerd Font,Maple Mono", FontAwesome, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    all: unset;
+    background-color: @background;
+    color: @foreground;
+    border-radius: 10px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @surface_bright;
+    border-radius: 10px;
+    padding: 2px 15px;
+    margin: 4px;
+}
+
+#workspaces button {
+    all: unset;
+    margin-right: 3px;
+    margin-left: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+    background-color: @primary;
+    color: @on_primary;
+    opacity: 0.4;
+    transition: all 1s ease-in-out;
+}
+
+#workspaces button:hover {
+    opacity: 1.0;
+}
+
+#workspaces button.active {
+    opacity: 1.0;
+    font-weight: bold;
+    border-radius: 15px; 
+}
+
+#custom-archlogo {
+    color: @primary;
+    padding: 4px;
+}
+
+#custom-power {
+    padding: 4px;
+}
+
+#battery.critical {
+    color: @error
+}

@@ -1,0 +1,18 @@
+include colors.conf
+
+
+{{- if eq .chezmoi.hostname "zoly-desktop" }}
+font_family      family="Google Sans Code"
+font_size 16
+{{- else if eq .chezmoi.hostname "zoly-laptop" }}
+font_family      family="JetBrainsMonoNL Nerd Font Mono"
+font_size 14
+{{- else }}
+{{- end }}
+
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+
+confirm_os_window_close 0

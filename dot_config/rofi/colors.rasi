@@ -1,0 +1,16 @@
+/* ~/.config/sys-themes/onedark/rofi/colors.rasi */
+* {
+    /* The 8 Essentials */
+    primary:         #98c379;   /* Green border/accent */
+    on-primary:      #282c34;   /* Dark text on green */
+
+    surface:         #282c34;   /* Background */
+    on-surface:      #abb2bf;   /* Light gray text */
+
+    inverse-primary: #61afef;   /* Blue separator line */
+
+    secondary:       #e06c75;   /* Red for 'Urgent' */
+    on-secondary:    #282c34;   /* Dark text on red */
+
+    tertiary:        #c678dd;   /* Purple for 'Active' */
+}

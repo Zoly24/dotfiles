@@ -1,0 +1,5 @@
+singleton Colorscheme 1.0 Colorscheme.qml
+
+BarConfig 1.0 BarConfig.qml
+Bar 1.0 Bar.qml
+SandBox 1.0 SandBox.qml

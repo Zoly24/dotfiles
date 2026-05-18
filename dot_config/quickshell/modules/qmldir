@@ -1,0 +1,13 @@
+# Singletons
+singleton WallpaperService 1.0 WallpaperService.qml
+singleton ClockModule 1.0 ClockModule.qml
+singleton AudioService 1.0 AudioService.qml
+
+# Regular Components
+HyprModule    1.0 HyprModule.qml
+WallSlide     1.0 WallSlide.qml
+WallpaperMenu 1.0 WallpaperMenu.qml
+StartMenu     1.0 StartMenu.qml
+AudioMenu     1.0 AudioMenu.qml
+AudioView     1.0 AudioView.qml
+WifiMenu      1.0 WifiMenu.qml

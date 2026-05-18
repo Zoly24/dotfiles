@@ -1,0 +1,10 @@
+{
+    "ProjectParameters": {
+        "importPaths": [
+            ".",
+            "components",
+            "modules",
+            "core"
+        ]
+    }
+}

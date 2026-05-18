@@ -1,0 +1,54 @@
+##############################
+### WINDOWS AND WORKSPACES ###
+##############################
+
+# hypr/windows-workspaces.conf
+
+{{- if eq .chezmoi.hostname "zoly-desktop" }}
+
+# Main monitor workspaces
+workspace = 1, monitor:$main_monitor, default:true
+workspace = 2, monitor:$main_monitor
+workspace = 3, monitor:$main_monitor
+workspace = 4, monitor:$main_monitor
+workspace = 5, monitor:$main_monitor
+
+# Side monitor workspaces
+workspace = 6, monitor:$side_monitor
+workspace = 7, monitor:$side_monitor
+workspace = 8, monitor:$side_monitor
+workspace = 9, monitor:$side_monitor
+workspace = 10, monitor:$side_monitor
+
+{{- else if eq .chezmoi.hostname "zoly-laptop" }}
+
+# Main monitor workspaces
+workspace = 1, monitor:$main_monitor, default:true
+workspace = 2, monitor:$main_monitor
+workspace = 3, monitor:$main_monitor
+workspace = 4, monitor:$main_monitor
+workspace = 5, monitor:$main_monitor
+
+{{- else}}
+# There seems to be no user for zoly-desktop or zoly-laptop
+
+{{- end }}
+
+# --- Layout Specific Settings ---
+scrolling {
+    direction = right
+    column_width = 0.5
+    fullscreen_on_one_column = true
+}
+
+dwindle {
+    preserve_split = true 
+}
+
+master {
+    new_status = master
+}
+
+monocle {
+
+}
