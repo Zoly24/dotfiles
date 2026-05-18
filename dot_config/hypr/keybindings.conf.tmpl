@@ -46,7 +46,7 @@ bind = $mainMod, S,     layoutmsg, colresize +conf
 # ─────────────────────────────────────────────────────────────
 # WORKSPACES
 # ─────────────────────────────────────────────────────────────
-{{- if eq .chezmoi.hostname "zoly-desktop" }}
+{{- if eq .hostname "desktop" }}
 bind = $mainMod, 1,     workspace, 1
 bind = $mainMod, 2,     workspace, 2
 bind = $mainMod, 3,     workspace, 3
@@ -69,7 +69,7 @@ bind = $mainMod SHIFT, 8, movetoworkspace, 8
 bind = $mainMod SHIFT, 9, movetoworkspace, 9
 bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
-{{- else if eq .chezmoi.hostname "zoly-laptop" }}
+{{- else if eq .hostname "laptop" }}
 bind = $mainMod, 1,     workspace, 1
 bind = $mainMod, 2,     workspace, 2
 bind = $mainMod, 3,     workspace, 3

@@ -3,7 +3,7 @@
 ### MONITORS ###
 ################
 
-{{- if eq .chezmoi.hostname "zoly-desktop" }}
+{{- if eq .hostname "desktop" }}
 $main_monitor = DP-2
 $side_monitor = DP-1
 
@@ -11,7 +11,7 @@ $side_monitor = DP-1
 monitor= $main_monitor, 2560x1440@240, 0x0, 1, transform, 0
 monitor= $side_monitor, 1920x1080@240, -1080x-450, 1, transform, 1
 
-{{- else if eq .chezmoi.hostname "zoly-laptop" }}
+{{- else if eq .hostname "laptop" }}
 $main_monitor = DP-1
 
 monitor= $main_monitor,preferred,auto,1

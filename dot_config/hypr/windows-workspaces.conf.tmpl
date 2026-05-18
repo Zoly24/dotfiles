@@ -4,7 +4,7 @@
 
 # hypr/windows-workspaces.conf
 
-{{- if eq .chezmoi.hostname "zoly-desktop" }}
+{{- if eq .hostname "desktop" }}
 
 # Main monitor workspaces
 workspace = 1, monitor:$main_monitor, default:true
@@ -20,7 +20,7 @@ workspace = 8, monitor:$side_monitor
 workspace = 9, monitor:$side_monitor
 workspace = 10, monitor:$side_monitor
 
-{{- else if eq .chezmoi.hostname "zoly-laptop" }}
+{{- else if eq .hostname "laptop" }}
 
 # Main monitor workspaces
 workspace = 1, monitor:$main_monitor, default:true

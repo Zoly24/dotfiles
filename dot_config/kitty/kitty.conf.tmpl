@@ -1,10 +1,10 @@
 include colors.conf
 
 
-{{- if eq .chezmoi.hostname "zoly-desktop" }}
+{{- if eq .hostname "desktop" }}
 font_family      family="Google Sans Code"
 font_size 16
-{{- else if eq .chezmoi.hostname "zoly-laptop" }}
+{{- else if eq .hostname "laptop" }}
 font_family      family="JetBrainsMonoNL Nerd Font Mono"
 font_size 14
 {{- else }}
