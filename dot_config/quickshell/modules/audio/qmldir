@@ -1,0 +1,6 @@
+# Singletons
+singleton AudioService 1.0 AudioService.qml
+
+# Regular Components
+AudioMenu     1.0 AudioMenu.qml
+AudioView     1.0 AudioView.qml

@@ -1,0 +1,6 @@
+# Singletons
+singleton WallpaperService 1.0 WallpaperService.qml
+
+# Regular Components
+WallSlide     1.0 WallSlide.qml
+WallpaperMenu 1.0 WallpaperMenu.qml

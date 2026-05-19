@@ -1,0 +1,4 @@
+# Singletons
+singleton ClockModule 1.0 ClockModule.qml
+
+# Regular Components
