@@ -1,7 +1,12 @@
 import Quickshell
 import QtQuick
 import "../components"
-import "../modules"
+import "../modules/audio/"
+import "../modules/clock/"
+import "../modules/hypr/"
+import "../modules/startmenu/"
+import "../modules/wallpaper/"
+import "../modules/wifi/"
 
 PanelWindow {
     id: bar

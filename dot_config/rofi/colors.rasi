@@ -1,16 +1,186 @@
-/* ~/.config/sys-themes/onedark/rofi/colors.rasi */
 * {
-    /* The 8 Essentials */
-    primary:         #98c379;   /* Green border/accent */
-    on-primary:      #282c34;   /* Dark text on green */
+    primary: #82aee2;
+    primary-fixed: #2d649a;
+    primary-fixed-dim: #02518c;
+    on-primary: #00315c;
+    on-primary-fixed: #ecf3ff;
+    on-primary-fixed-variant: #a1ccff;
+    primary-container: #02518c;
+    on-primary-container: #abd3ff;
+    secondary: #9facbf;
+    secondary-fixed: #536276;
+    secondary-fixed-dim: #3e4e62;
+    on-secondary: #152e4a;
+    on-secondary-fixed: #ecf3ff;
+    on-secondary-fixed-variant: #bdcade;
+    secondary-container: #3e4e62;
+    on-secondary-container: #c4d1e5;
+    tertiary: #b9a1c7;
+    tertiary-fixed: #6d577d;
+    tertiary-fixed-dim: #584168;
+    on-tertiary: #381b4d;
+    on-tertiary-fixed: #fbedff;
+    on-tertiary-fixed-variant: #d8bfe7;
+    tertiary-container: #584168;
+    on-tertiary-container: #dfc6ee;
+    error: #ff8173;
+    on-error: #7e0002;
+    error-container: #b7000a;
+    on-error-container: #ffbfb7;
+    surface: #242b33;
+    on-surface: #cecfd5;
+    on-surface-variant: #a7abb4;
+    outline: #8a8f97;
+    outline-variant: #474d56;
+    shadow: #000000;
+    scrim: #000000;
+    inverse-surface: #e3e4ea;
+    inverse-on-surface: #565a60;
+    inverse-primary: #4476a9;
+    surface-dim: #242b33;
+    surface-bright: #484c53;
+    surface-container-lowest: #1d2432;
+    surface-container-low: #2d3239;
+    surface-container: #30363c;
+    surface-container-high: #3a3e46;
+    surface-container-highest: #44484f;
+}
 
-    surface:         #282c34;   /* Background */
-    on-surface:      #abb2bf;   /* Light gray text */
+#window {
+    background-color: @surface;
+    border-color: @primary;
+    border: 0;
+    padding: 2.5ch;
+}
 
-    inverse-primary: #61afef;   /* Blue separator line */
+#mainbox {
+    border: 0;
+    padding: 0;
+}
 
-    secondary:       #e06c75;   /* Red for 'Urgent' */
-    on-secondary:    #282c34;   /* Dark text on red */
+#message {
+    border: 2px 0px 0px;
+    border-color: @primary;
+    padding: 1px;
+}
 
-    tertiary:        #c678dd;   /* Purple for 'Active' */
+#textbox {
+    text-color: @on-surface;
+}
+
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0px 0.3em 0em 0em;
+    text-color: @on-surface;
+}
+
+#listview {
+    fixed-height: 0;
+    border: 2px 0px 0px;
+    border-color: @inverse-primary;
+    spacing: 2px;
+    scrollbar: true;
+    padding: 2px 0px 0px;
+}
+
+#element {
+    border: 0;
+    padding: 1px;
+}
+
+#element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+#element.normal.normal {
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+#element.normal.urgent {
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+#element.normal.active {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+#element.selected.normal {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+#element.selected.urgent {
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+#element.selected.active {
+    background-color: @tertiary;
+    text-color: @on-surface;
+}
+
+#element.alternate.normal {
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+#element.alternate.urgent {
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+#element.alternate.active {
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+#scrollbar {
+    width: 4px;
+    border: 0;
+    handle-width: 8px;
+    padding: 0;
+}
+
+#sidebar {
+    border: 2px 0px 0px;
+    border-color: @primary;
+}
+
+#button {
+    text-color: @on-surface;
+}
+
+#button.selected {
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+#inputbar {
+    spacing: 0;
+    text-color: @on-surface;
+    padding: 1px;
+}
+
+#case-indicator {
+    spacing: 0;
+    text-color: @on-surface;
+}
+
+#entry {
+    spacing: 0;
+    text-color: @on-surface;
+}
+
+#prompt {
+    spacing: 0;
+    text-color: @on-surface;
 }

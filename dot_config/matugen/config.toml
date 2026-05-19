@@ -1,10 +1,10 @@
 [config.wallpaper]
-command = "swww"
+command = "awww"
 arguments = ["img",
-    "--transition-type", "center",
-    "--transition-duration", "2",
+    "--transition-type", "wave",
+    "--transition-step", "180",
     "--transition-fps", "240",
-    "--transition-step", "200"]
+    "--transition-wave", "50,30"]
 set = true
 
 [templates.waybar]
@@ -30,3 +30,7 @@ output_path = '~/.config/rofi/colors.rasi'
 input_path = './templates/neovim/template.lua'
 output_path = '~/.config/nvim/generated.lua'
 post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.quickshell]
+input_path = './templates/quickshell-colors.json'
+output_path = '~/.config/quickshell/core/quickshell-colors.json'
