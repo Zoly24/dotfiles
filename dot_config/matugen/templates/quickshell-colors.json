@@ -1,0 +1,9 @@
+{
+  "bg": "{{colors.surface.default.hex}}",
+  "bgAccent": "{{colors.surface_container.default.hex}}",
+  "primary": "{{colors.primary.default.hex}}",
+  "primaryAccent": "{{colors.tertiary.default.hex}}",
+  "fontColorGray": "{{colors.on_surface_variant.default.hex}}",
+  "unfocusedWorkspace": "{{colors.outline.default.hex}}",
+  "startMenuBg": "{{colors.surface_container.default.hex}}"
+}
